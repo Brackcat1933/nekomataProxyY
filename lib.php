@@ -28,7 +28,7 @@ require_once(dirname(__FILE__).'/YouTubeDownloader.php');
    return $f;  
 }
 //获取类别热门视频
-function get_trending($apikey,$max,$pageToken='',$regionCode='vn'){
+function get_trending($apikey,$max,$pageToken='',$regionCode='jp'){
     $apilink='https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&chart=mostPopular&regionCode='.$regionCode.'&maxResults='.$max.'&key='.$apikey.'&pageToken='.$pageToken;
      return json_decode(get_data($apilink),true);
 }
@@ -53,13 +53,13 @@ function get_related_video($vid,$apikey){
 
 
 //获取用户频道视频
-function get_channel_video($cid,$pageToken='',$apikey,$regionCode='VN'){
+function get_channel_video($cid,$pageToken='',$apikey,$regionCode='JP'){
    $apilink='https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&maxResults=50&type=video&regionCode='.$regionCode.'&hl=zh-CN&channelId='.$cid.'&key='.$apikey.'&pageToken='.$pageToken;
    return json_decode(get_data($apilink),true);
 }
 
 //获取视频类别内容
-function videoCategories($apikey,$regionCode='HK'){
+function videoCategories($apikey,$regionCode='JP'){
    $apilink='https://www.googleapis.com/youtube/v3/videoCategories?part=snippet&regionCode='.$regionCode.'&hl=zh-CN&key='.$apikey;
    return json_decode(get_data($apilink),true);
 }
@@ -106,14 +106,14 @@ function categorieslist($id){
      }
 }
 //获取视频类别内容
-function Categories($id,$apikey,$pageToken='',$order='relevance',$regionCode='VN'){
+function Categories($id,$apikey,$pageToken='',$order='relevance',$regionCode='JP'){
    $apilink='https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&&regionCode='.$regionCode.'&hl=zh-ZH&maxResults=48&videoCategoryId='.$id.'&key='.$apikey.'&order='.$order.'&pageToken='.$pageToken;
    return json_decode(get_data($apilink),true);
 }
 
 
 //获取搜索数据
-function get_search_video($query,$apikey,$pageToken='',$type='video',$order='relevance',$regionCode='VN'){
+function get_search_video($query,$apikey,$pageToken='',$type='video',$order='relevance',$regionCode='JP'){
    $apilink='https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=48&order='.$order.'&type='.$type.'&q='.$query.'&key='.$apikey.'&pageToken='.$pageToken;
    return json_decode(get_data($apilink),true);
 }
@@ -136,11 +136,11 @@ function format_date($time){
     $t=time()-$t;
     $f=array(
     '31536000'=>'年',
-    '2592000'=>'个月',
-    '604800'=>'周',
-    '86400'=>'天',
-    '3600'=>'小时',
-    '60'=>'分钟',
+    '2592000'=>'月',
+    '604800'=>'週',
+    '86400'=>'日',
+    '3600'=>'時間',
+    '60'=>'分',
     '1'=>'秒'
     );
     foreach ($f as $k=>$v)    {
