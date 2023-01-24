@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="ja">
 <head>
-    <title>You2PHP安装！</title>
+    <title>You2PHPをインストール！</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://wangxiaoqing123.coding.me/hellocss.coding.me/pintuer.css">
@@ -50,7 +50,7 @@
 
             
             <div class="xs12 xm12 xb12 padding">
-                
+                <p>ネコマタぷろくしYは"You2PHP"と言うソフトのもと運営してます。以下そのままのインストールページです</p>
 <?php
 ini_set("display_errors", "Off");
 error_reporting(E_ALL^E_NOTICE^E_WARNING);
