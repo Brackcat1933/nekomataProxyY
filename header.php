@@ -7,8 +7,8 @@ error_reporting( E_ALL&~E_NOTICE );
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php echo $headtitle ?></title>
-<meta name="keywords" content="Youtube,Youtube镜像,Youtube直通车,Youtube镜像网站,Youtube视频代理,Youtube在线视频" />
-<meta name="description" content="Youtube镜像" />
+<meta name="keywords" content="にゃお" />
+<meta name="description" content="にゃーん" />
 
 <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" >
