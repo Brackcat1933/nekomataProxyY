@@ -230,9 +230,9 @@ function video_down($v,$name){
 $yt = new YouTubeDownloader();
 $links = $yt->getDownloadLinks("https://www.youtube.com/watch?v=$v");
 echo '<table class="table table-hover"><thead><tr>
-      <th>格式</th>
-      <th>类型</th>
-      <th>下载</th>
+      <th>フォーマット</th>
+      <th>タイプ</th>
+      <th>ダウンロード</th>
     </tr>
   </thead>';
 foreach ($links as $value) {
@@ -281,97 +281,97 @@ function Hislist($str,$apikey){
 
 //获取频道所属国家
 $CountryID=array(
-    'DZ' => '阿尔及利亚',
-    'AR' => '阿根廷',
-    'AE' => '阿拉伯联合酋长国',
-    'OM' => '阿曼',
-    'AZ' => '阿塞拜疆',
-    'EG' => '埃及',
-    'IE' => '爱尔兰',
-    'EE' => '爱沙尼亚',
-    'AT' => '奥地利',
-    'AU' => '澳大利亚',
-    'PK' => '巴基斯坦',
-    'BH' => '巴林',
-    'BR' => '巴西',
-    'BY' => '白俄罗斯',
-    'BG' => '保加利亚',
-    'BE' => '比利时',
-    'IS' => '冰岛',
-    'PR' => '波多黎各',
-    'PL' => '波兰',
-    'BA' => '波斯尼亚和黑塞哥维那',
-    'DK' => '丹麦',
-    'DE' => '德国',
-    'RU' => '俄罗斯',
-    'FR' => '法国',
-    'PH' => '菲律宾',
-    'FI' => '芬兰',
-    'CO' => '哥伦比亚',
-    'GE' => '格鲁吉亚共和国',
-    'KZ' => '哈萨克斯坦',
-    'KR' => '韩国',
-    'NL' => '荷兰',
-    'ME' => '黑山共和国',
-    'CA' => '加拿大',
+    'DZ' => 'アルジェリア',
+    'AR' => 'アルゼンチン',
+    'AE' => 'アラブ首長国連邦',
+    'OM' => 'オマーン',
+    'AZ' => 'アゼルバイジャン',
+    'EG' => 'エジプト',
+    'IE' => 'アイルランド',
+    'EE' => 'エストニア',
+    'AT' => 'オーストリア',
+    'AU' => 'オーストラリア',
+    'PK' => 'パキスタン',
+    'BH' => 'バーレーン',
+    'BR' => 'ブラジル',
+    'BY' => 'ベラルーシ',
+    'BG' => 'ブルガリア',
+    'BE' => 'ベルギー',
+    'IS' => 'アイスランド',
+    'PR' => 'プエルトリコ',
+    'PL' => 'ポーランド',
+    'BA' => 'ボズニア・ヘルツェゴビナ',
+    'DK' => 'デンマーク',
+    'DE' => 'ドイツ',
+    'RU' => 'ロシア',
+    'FR' => 'フランス',
+    'PH' => 'フィリピン',
+    'FI' => 'フィンランド',
+    'CO' => 'コロンビア',
+    'GE' => 'グルジア共和国',
+    'KZ' => 'カザフスタン',
+    'KR' => '韓国',
+    'NL' => 'オランダ',
+    'ME' => 'モンテネグロ共和国',
+    'CA' => 'カナダ',
     'CN' => '中国',
-    'GH' => '加纳',
-    'CZ' => '捷克共和国',
-    'ZW' => '津巴布韦',
-    'QA' => '卡塔尔',
-    'KW' => '科威特',
-    'HR' => '克罗地亚',
-    'KE' => '肯尼亚',
-    'LV' => '拉脱维亚',
-    'LB' => '黎巴嫩',
-    'LT' => '立陶宛',
-    'LY' => '利比亚',
-    'LU' => '卢森堡公国',
-    'RO' => '罗马尼亚',
-    'MY' => '马来西亚',
-    'MK' => '马其顿',
-    'US' => '美国',
-    'PE' => '秘鲁',
-    'MA' => '摩洛哥',
-    'MX' => '墨西哥',
-    'ZA' => '南非',
-    'NP' => '尼泊尔',
-    'NG' => '尼日利亚',
-    'NO' => '挪威',
-    'PT' => '葡萄牙',
+    'GH' => 'ガーナ',
+    'CZ' => 'チェコ共和国',
+    'ZW' => 'ジンバブエ',
+    'QA' => 'カタール',
+    'KW' => 'クウェート',
+    'HR' => 'クロアチア',
+    'KE' => 'ケニア',
+    'LV' => 'ラトビア',
+    'LB' => 'レバノン',
+    'LT' => 'リトアニア',
+    'LY' => 'リビア',
+    'LU' => 'ルクセンブルク公国',
+    'RO' => 'ルーマニア',
+    'MY' => 'マレーシア',
+    'MK' => 'マケドニア',
+    'US' => 'アメリカ合衆国',
+    'PE' => 'ペルー',
+    'MA' => 'モロッコ',
+    'MX' => 'メキシコ',
+    'ZA' => '南アフリカ',
+    'NP' => 'ネパール',
+    'NG' => 'ナイジェリア',
+    'NO' => 'ノルウェー',
+    'PT' => 'ポルトガル',
     'JP' => '日本',
-    'SE' => '瑞典',
-    'CH' => '瑞士',
-    'RS' => '塞尔维亚',
-    'SN' => '塞内加尔',
-    'SA' => '沙特阿拉伯',
-    'LK' => '斯里兰卡',
-    'SK' => '斯洛伐克',
-    'SI' => '斯洛文尼亚',
+    'SE' => 'スウェーデン',
+    'CH' => 'スイス',
+    'RS' => 'セルビア',
+    'SN' => 'セネガル',
+    'SA' => 'サウジアラビア',
+    'LK' => 'スリランカ',
+    'SK' => 'スロバキア',
+    'SI' => 'スロベニア',
     'TW' => '台湾',
-    'TH' => '泰国',
-    'TZ' => '坦桑尼亚',
-    'TN' => '突尼斯',
-    'TR' => '土耳其',
-    'UG' => '乌干达',
-    'UA' => '乌克兰',
-    'ES' => '西班牙',
-    'GR' => '希腊',
+    'TH' => 'タイ',
+    'TZ' => 'タンザニア',
+    'TN' => 'チュニジア',
+    'TR' => 'トルコ',
+    'UG' => 'ウガンダ',
+    'UA' => 'ウクライナ',
+    'ES' => 'スペイン',
+    'GR' => 'ギリシャ',
     'HK' => '香港',
-    'SG' => '新加坡',
-    'NZ' => '新西兰',
-    'HU' => '匈牙利',
-    'JM' => '牙买加',
-    'YE' => '也门',
-    'IQ' => '伊拉克',
-    'IL' => '以色列',
-    'IT' => '意大利',
-    'IN' => '印度',
-    'ID' => '印尼',
-    'GB' => '英国',
-    'JO' => '约旦',
-    'VN' => '越南',
-    'CL' => '智利',
+    'SG' => 'シンガポール',
+    'NZ' => 'ニュージーランド',
+    'HU' => 'ハンガリー',
+    'JM' => 'ジャマイカ',
+    'YE' => 'イエメン',
+    'IQ' => 'イラク',
+    'IL' => 'イスラエル',
+    'IT' => 'イタリア',
+    'IN' => 'インド',
+    'ID' => 'インドネシア',
+    'GB' => 'イギリス',
+    'JO' => 'ジョーダン',
+    'VN' => 'ベトナム',
+    'CL' => 'チリ',
     );
 function get_country($c){
     global $CountryID;
@@ -408,31 +408,31 @@ function strdecode($string,$key='09KxDsIIe|+]8Fo{YP<l+3!y#>a$;^PzFpsxS9&d;!l;~M>
 }
 
 //分享功能
-function shareit($id,$title='免翻墙Youtube镜像'){
+function shareit($id,$title='ファイアウォールなしYoutubeミラーサイト'){
     $pic=ROOT_PART.'/thumbnail.php?vid='.$id;
     $url=ROOT_PART.'watch-'.$id.'.html';
     $title=str_replace('&','||',$title);
     $title=str_replace('"',' ',$title);
      $title=str_replace("'",' ',$title);
-    $des='【免翻墙Youtube镜像】我正在通过这个网站看《'.$title.'》不用翻墙看全球视频，手机电脑都能看，快来试试吧！';
+    $des='【Youtubeミラー】このサイトを通してこれを見てます:《'.$title.'》フィルターを回避してYoutubeが見れます。お試しあれ！';
     return "<div id='share'>
   <a class='icoqz' href='https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=".$url."&desc=".$des."&title=".$titlel."
 &pics=".$pic."' target='blank' title='分享到QQ空间'><i class='iconfont icon-qqkongjian icofontsize'></i></a>
 
-  <a class='icotb' href='http://tieba.baidu.com/f/commit/share/openShareApi?title=".$title."&url=".$url."&to=tieba&type=text&relateUid=&pic=".$pic."&key=&sign=on&desc=&comment=".$title."' target='blank' title='分享到贴吧'><i class='iconfont icon-40 icofontsize'></i></a>
+  <a class='icotb' href='http://tieba.baidu.com/f/commit/share/openShareApi?title=".$title."&url=".$url."&to=tieba&type=text&relateUid=&pic=".$pic."&key=&sign=on&desc=&comment=".$title."' target='blank' title='シェアして投稿'><i class='iconfont icon-40 icofontsize'></i></a>
 
-  <a class='icowb' href='http://service.weibo.com/share/share.php?url=".$url."&title=".$des."&pic=".$pic."&sudaref=".$title."' target='blank' title='分享到微博'><i class='iconfont icon-weibo icofontsize'></i></a>
+  <a class='icowb' href='http://service.weibo.com/share/share.php?url=".$url."&title=".$des."&pic=".$pic."&sudaref=".$title."' target='blank' title='Twitterでシェア'><i class='iconfont icon-weibo icofontsize'></i></a>
 
-  <a class='icobi' href='https://member.bilibili.com/v/#/text-edit' target='blank' title='分享到哔哩哔哩'><i class='iconfont icon-bilibili icofontsize'></i></a>
+  <a class='icobi' href='https://member.bilibili.com/v/#/text-edit' target='blank' title='bilibiliでシェア'><i class='iconfont icon-bilibili icofontsize'></i></a>
 
-  <a class='icowx' href='http://api.addthis.com/oexchange/0.8/forward/wechat/offer?url=".ROOT_PART."watch.php?v=".$id."' target='blank' title='分享到微信' ><i class='iconfont icon-weixin icofontsize'></i></a>
+  <a class='icowx' href='http://api.addthis.com/oexchange/0.8/forward/wechat/offer?url=".ROOT_PART."watch.php?v=".$id."' target='blank' title='WeChatでシェア' ><i class='iconfont icon-weixin icofontsize'></i></a>
 </div>
  <div class='form-group'><div class='d-inline-block h6 pt-3 col-12'>
-    分享代码：
+    コードを共有する：
  </div>
     <textarea style='resize:none;height: auto' class='form-control d-inline align-middle col-12 icoys icontext' id='inputs' type='text' rows='5' placeholder='Default input'><iframe height=498 width=510 src=&quot;".ROOT_PART."embed/?v=".$id.";&quot; frameborder=0 &quot;allowfullscreen&quot;></iframe></textarea>
     
-    <button type='submit' class='btn btn-primary align-middle col-12 mt-2' onclick='copytext1()'>复制</button></div>";
+    <button type='submit' class='btn btn-primary align-middle col-12 mt-2' onclick='copytext1()'>リプロダクト</button></div>";
     
 }
 //
