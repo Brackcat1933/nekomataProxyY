@@ -6,7 +6,7 @@ $sortid = $_GET['sortid'];
 $order  = isset($_GET['order']) ? $_GET['order'] : 'relevance';
 switch ($cont) {
 case 'history':
-    $headtitle='歴史';
+    $headtitle='履歴';
 	break;
 case 'category':
     $headtitle=categorieslist($sortid).'-'.SITE_NAME;
